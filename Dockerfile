@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 MAINTAINER Jack Willis-Craig <jackw@fishvision.com>
-ENV DEBIAN_FRONTEND noninteractive
+ARG DEBIAN_FRONTEND noninteractive
 
 # Remove sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -17,14 +17,13 @@ RUN apt-get -y install wget \
     libssl-dev \
     vim \
     nano \
-    openssh-client
+    openssh-client \
+    software-properties-common
 
 # Install PHP
 RUN add-apt-repository ppa:ondrej/php5-5.6
 RUN apt-get update
-RUN apt-get upgrade
-RUN apt-get install software-properties-common \
-    php5
+RUN apt-get install -y php5
 
 # Clean apt
 RUN apt-get clean
