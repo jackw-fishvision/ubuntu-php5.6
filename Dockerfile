@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 MAINTAINER Jack Willis-Craig <jackw@fishvision.com>
-ARG DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 # Remove sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
