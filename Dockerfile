@@ -1,5 +1,5 @@
-FROM ubuntu:xenial
-MAINTAINER Alex Price <alexp@fishvision.com>
+FROM ubuntu:trusty
+MAINTAINER Jack Willis-Craig <jackw@fishvision.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 # Remove sh
