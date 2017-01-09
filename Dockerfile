@@ -33,7 +33,7 @@ RUN apt-get clean
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash && \
     export NVM_DIR="/root/.nvm" && \
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && \
-    nvm install 4.6 lts
+    nvm install 6.9 lts
 
 # Misc
 RUN mkdir -p ~/.ssh
