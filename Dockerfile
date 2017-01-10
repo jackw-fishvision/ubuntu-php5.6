@@ -21,7 +21,7 @@ RUN apt-get -y install wget \
     software-properties-common
 
 # Install PHP
-RUN add-apt-repository ppa:ondrej/php5-5.6
+RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y php5
 
